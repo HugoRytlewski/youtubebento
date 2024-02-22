@@ -331,7 +331,7 @@
         <div class="h-[164px] overflow-hidden relative">
           <img
             class="z-50 absolute"
-            src="./assets/img/Cyril.jpg"
+            src="./assets/img/cyril.jpg"
             alt="Image Description"
           />
           <div
@@ -345,7 +345,7 @@
           <div class="relative w-72 h-40 shadow-2xl">
             <img
               class="w-full h-full object-cover filter blur-xl"
-              src="./assets/img/Cyril.jpg"
+              src="./assets/img/cyril.jpg"
             />
             <div
               class="absolute top-0 h-full w-[110%] bg-gray-500 opacity-50"
