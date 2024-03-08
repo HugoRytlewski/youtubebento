@@ -50,7 +50,7 @@ const { titre, chaine , nombre_vues ,logo_chaine ,miniature,date_sortie,temps} =
               class="absolute w-[28px] h-[28px] bg-red-600 rounded-lg overflow-hidden "
             >
               <NuxtImg              
-              :src="`/${logo_chaine}`"
+              :src="`./${logo_chaine}`"
               alt="" />
             </div>
             <div class="flex flex-col ">
