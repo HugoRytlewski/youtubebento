@@ -21,7 +21,7 @@ const { titre, chaine , nombre_vues ,logo_chaine ,miniature,date_sortie,temps} =
         <div class="h-[164px] overflow-hidden relative bg-red-600 ">
           <NuxtImg
             class="z-50 absolute"
-            :src="`${miniature}`"
+            :src="`/${miniature}`"
             height="164"
             alt="Image Description"
           />
@@ -36,7 +36,7 @@ const { titre, chaine , nombre_vues ,logo_chaine ,miniature,date_sortie,temps} =
           <div class="relative w-72 h-40 shadow-2xl">
             <NuxtImg
               class="w-full h-full object-cover filter blur-xl scale-150"
-              :src="`${miniature}`"
+              :src="`/${miniature}`"
             />
             <div
               class="absolute top-0 h-full w-[110%] bg-gray-500 opacity-50"
@@ -50,7 +50,7 @@ const { titre, chaine , nombre_vues ,logo_chaine ,miniature,date_sortie,temps} =
               class="absolute w-[28px] h-[28px] bg-red-600 rounded-lg overflow-hidden "
             >
               <NuxtImg              
-              :src="`${logo_chaine}`"
+              :src="`/${logo_chaine}`"
               alt="" />
             </div>
             <div class="flex flex-col ">
