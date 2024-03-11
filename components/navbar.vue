@@ -1,13 +1,14 @@
 <template>
-
-<nav class=" w-[77rem] flex justify-center gap-[23px]">
-    <div
-      class="w-[11.68rem] h-[3.75rem] bg-red-600 cursor-pointer hover:bg-red-700 duration-500 rounded-xl flex justify-center items-center"
-    >
-      <a href="https://www.youtube.com" class="text-white text-xl font-bold"
-        ><img src="../assets/img/logo.svg" alt=""
-      /></a>
-    </div>
+  <nav class="w-[77rem] flex justify-center gap-[23px]">
+    <NuxtLink to="/">
+      <div
+        class="w-[11.68rem] h-[3.75rem] bg-red-600 cursor-pointer hover:bg-red-800 duration-300 rounded-xl flex justify-center items-center"
+      >
+        <p class="text-white text-xl font-bold">
+          <img src="../assets/img/logo.svg" alt="" />
+        </p>
+      </div>
+    </NuxtLink>
     <div class="w-[51rem] rounded-xl">
       <div class="relative mb-6 bg-[#1F2937] rounded-xl">
         <div

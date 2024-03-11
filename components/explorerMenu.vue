@@ -43,5 +43,4 @@
   <p class="text-white">Podcasts</p>
 </div>
 
-</div>
 </template>

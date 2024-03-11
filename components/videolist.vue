@@ -5,6 +5,7 @@ v-for="video in videos"
 class="flex flex-wrap  gap-y-[10px]"
 > 
       <VideoBox 
+      :id=video.id
       :titre=video.titre
       :chaine=video.chaine
       :nombre_vues=video.nombre_vues

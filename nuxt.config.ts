@@ -9,7 +9,7 @@ export default defineNuxtConfig({
     },
   },
   image: {
-    dir: "public/image",
+    dir: "/image",
   },
   imports: {
     dirs: [
