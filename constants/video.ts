@@ -9,6 +9,7 @@ export const videos = [
     miniature: "corseInox.jpg",
     date_sortie: "2022-07-01",
     temps: "1:07:40",
+    link: "https://www.youtube.com/embed/ZRJo0yJWdfY?si=ZP0yWiI_V4x20WKB",
   },
   {
     id: 2,
@@ -19,6 +20,7 @@ export const videos = [
     miniature: "/Bazar.jpg",
     date_sortie: "2018-04-01",
     temps: "22:16",
+    link: "https://www.youtube.com/embed/jarbNjyux3s?si=mL-aj5Nm2TcD2BYL",
   },
   {
     id: 3,
@@ -30,6 +32,7 @@ export const videos = [
     miniature: "Micka.jpg",
     date_sortie: "2022-07-01",
     temps: "07:05",
+    link: "https://www.youtube.com/embed/IxczEtQUFgg?si=Y2Ew24yDv9l5dJqC",
   },
   {
     id: 4,
@@ -40,6 +43,7 @@ export const videos = [
     miniature: "bagel.jpg",
     date_sortie: "2024-01-01",
     temps: "34:34",
+    link: "https://www.youtube.com/embed/B2eSchvRNJE?si=3l0A46J9UM_NbNVG",
   },
   {
     id: 5,
@@ -50,5 +54,6 @@ export const videos = [
     miniature: "cyril.jpg",
     date_sortie: "2024-03-03",
     temps: "1:07:40",
+    link: "https://www.youtube.com/embed/9dnZQC_PPNk?si=P4x8DePDIat62fBc",
   },
 ];
