@@ -68,7 +68,7 @@ const {
       </div>
     </div>
     <NuxtImg
-      class="w-[9rem] h-[9rem] object-cover absolute filter blur-xl scale-150 hidden group-hover:flex duration-300"
+      class="w-[9rem] h-[9rem] object-cover absolute filter blur-2xl opacity-20 scale-[2.1] hidden group-hover:flex duration-300"
       :src="`${miniature}`"
     />
   </div>

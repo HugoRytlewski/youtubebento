@@ -1,5 +1,3 @@
-<script setup>
-</script>
 <template>
 <div class="flex w-[80rem] gap-y-10 overflow-visible flex-wrap">
 <div 
