@@ -1,3 +1,9 @@
+# PROJET de youtube bento en cour de dev 
+desing de Mickadoule
+https://www.youtube.com/channel/UC4fQ-aeh7WIzZVMN1vpLFrw
+
+https://www.figma.com/community/file/1314291184219843263
+
 # Nuxt 3 Minimal Starter
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
