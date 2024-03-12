@@ -1,3 +1,13 @@
+<script setup>
+const search = ref("");
+const router = useRouter();
+
+function searchFunction() {
+  console.log(search.value);
+  router.push(`/search/${search.value}`);
+}
+</script>
+
 <template>
   <nav class="w-[77rem] flex justify-center gap-[23px]">
     <NuxtLink to="/">
@@ -19,15 +29,23 @@
         <div class="flex justify-between focus:border b outline-red-500">
           <input
             type="text"
+            v-model="search"
             id="input-group-1"
+            @keyup.enter="searchFunction"
             class="h-[3.75rem] w-[45rem] bg-[#1F2937] text-white text-sm rounded-lg ps-10 p-2.5 apparence-none outline-none"
             placeholder="Rechercher"
           />
-          <div
-            class="h-[3.75rem] w-24 p-4 ml-2 flex items-center justify-center hover:text-red-500"
-          >
-            <img src="../assets/img/micro.svg" class="cursor-pointer" alt="" />
-          </div>
+          <NuxtLink :to="`/search/${search}`">
+            <div
+              class="h-[3.75rem] w-24 p-4 ml-2 flex items-center justify-center hover:text-red-500"
+            >
+              <img
+                src="../assets/img/micro.svg"
+                class="cursor-pointer"
+                alt=""
+              />
+            </div>
+          </NuxtLink>
         </div>
       </div>
     </div>

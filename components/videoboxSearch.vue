@@ -40,8 +40,7 @@ function vueCounter(nombre_vues) {
   if (nombre_vues >= 1000000) return `${Math.floor(nombre_vues / 1000000)} M `;
 }
 
-console.log(dateDiff(new Date(date_sortie)));
-const fixMiniature = "/image/" + miniature;
+const fixMiniature = miniature;
 const fixLogo = "/image/" + logo_chaine;
 </script>
 
