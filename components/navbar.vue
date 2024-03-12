@@ -16,15 +16,15 @@
         >
           <img src="../assets/img/loupe.svg" class="ml-2" alt="" />
         </div>
-        <div class="flex justify-between">
+        <div class="flex justify-between focus:border b outline-red-500">
           <input
             type="text"
             id="input-group-1"
-            class="h-[3.75rem] w-[45rem] bg-[#1F2937] text-white text-sm rounded-lg ps-10 p-2.5"
+            class="h-[3.75rem] w-[45rem] bg-[#1F2937] text-white text-sm rounded-lg ps-10 p-2.5 apparence-none outline-none"
             placeholder="Rechercher"
           />
           <div
-            class="h-[3.75rem] w-24 p-4 ml-2 flex items-center justify-center"
+            class="h-[3.75rem] w-24 p-4 ml-2 flex items-center justify-center hover:text-red-500"
           >
             <img src="../assets/img/micro.svg" class="cursor-pointer" alt="" />
           </div>
