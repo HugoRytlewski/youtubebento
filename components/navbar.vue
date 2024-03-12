@@ -3,7 +3,6 @@ const search = ref("");
 const router = useRouter();
 
 function searchFunction() {
-  console.log(search.value);
   router.push(`/search/${search.value}`);
 }
 </script>

@@ -40,12 +40,53 @@ function vueCounter(nombre_vues) {
   if (nombre_vues >= 1000000) return `${Math.floor(nombre_vues / 1000000)} M `;
 }
 
+function convertDuration(durationString) {
+  const duration = durationString.slice(2);
+
+  const hoursIndex = duration.indexOf("H");
+  const minutesIndex = duration.indexOf("M");
+  const secondsIndex = duration.indexOf("S");
+
+  let hours = "0";
+  let minutes = "0";
+  let seconds = "0";
+
+  if (hoursIndex !== -1) {
+    hours = duration.slice(0, hoursIndex);
+  }
+
+  if (minutesIndex !== -1) {
+    minutes = duration.slice(
+      hoursIndex !== -1 ? hoursIndex + 1 : 0,
+      minutesIndex
+    );
+  }
+
+  if (secondsIndex !== -1) {
+    seconds = duration.slice(
+      minutesIndex !== -1
+        ? minutesIndex + 1
+        : hoursIndex !== -1
+        ? hoursIndex + 1
+        : 0,
+      secondsIndex
+    );
+  }
+
+  const formattedDuration = `${
+    hours !== "0" ? hours + ":" : ""
+  }${minutes}:${seconds.padStart(2, "0")}`;
+
+  return formattedDuration;
+}
+
 const fixMiniature = miniature;
-const fixLogo = "/image/" + logo_chaine;
+console.log(logo_chaine);
+const fixLogo = logo_chaine;
 </script>
 
 <template>
-  <NuxtLink :to="`/detail/${id}`">
+  <NuxtLink :to="`/detail/${id}/${titre}`">
     <div
       class="flex items-center justify-center group cursor-pointer select-none"
     >
@@ -63,7 +104,7 @@ const fixLogo = "/image/" + logo_chaine;
           <div
             class="z-50 absolute bottom-2 right-2 p-2 h-[20px] text-white bg-neutral-900 bg-opacity-80 rounded-full text-center flex items-center justify-center group-hover:opacity-0 duration-200"
           >
-            <p class="text-[12px] text-center">{{ temps }}</p>
+            <p class="text-[12px] text-center">{{ convertDuration(temps) }}</p>
           </div>
         </div>
 

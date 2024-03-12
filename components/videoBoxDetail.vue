@@ -19,7 +19,6 @@ const {
   temps: String,
 });
 
-// date du jour
 const datetoDay = new Date();
 
 function dateDiff(date1) {
@@ -40,13 +39,12 @@ function vueCounter(nombre_vues) {
   if (nombre_vues >= 1000000) return `${Math.floor(nombre_vues / 1000000)} M `;
 }
 
-console.log(dateDiff(new Date(date_sortie)));
 const fixMiniature = "/image/" + miniature;
 const fixLogo = "/image/" + logo_chaine;
 </script>
 
 <template>
-  <NuxtLink :to="`/detail/${id}`">
+  <NuxtLink :to="`/detail/${id}/${titre}`">
     <div class="pl-5">
       <div
         class="h-[7rem] w-[27rem] rounded-lg bg-gray-800 hover:bg-gray-700 duration-300 flex gap-2 p-2"

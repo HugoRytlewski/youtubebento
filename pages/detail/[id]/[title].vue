@@ -1,7 +1,22 @@
 <script setup>
 const route = useRoute();
 const idRecherche = ref(route.params.id);
-const video = videos.find((objet) => objet.id.toString() === idRecherche.value);
+const titreRecherche = ref(route.params.title);
+let video = videos.find((objet) => objet.id.toString() === idRecherche.value);
+
+if (!video) {
+  console.log("video non trouvée");
+  video = {
+    titre: titreRecherche.value,
+    chaine: "Nom de la chaîne",
+    nombre_vues: 0,
+    logo_chaine: "logo_chaine",
+    miniature: "miniature",
+    date_sortie: "2021-09-01T00:00:00Z",
+    temps: "PT0S",
+    link: `https://www.youtube.com/embed/${idRecherche.value}`,
+  };
+}
 </script>
 
 <template>

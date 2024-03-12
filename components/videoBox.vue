@@ -40,13 +40,12 @@ function vueCounter(nombre_vues) {
   if (nombre_vues >= 1000000) return `${Math.floor(nombre_vues / 1000000)} M `;
 }
 
-console.log(dateDiff(new Date(date_sortie)));
 const fixMiniature = "/image/" + miniature;
 const fixLogo = "/image/" + logo_chaine;
 </script>
 
 <template>
-  <NuxtLink :to="`/detail/${id}`">
+  <NuxtLink :to="`/detail/${id}/${titre}`">
     <div
       class="flex items-center justify-center group cursor-pointer select-none"
     >

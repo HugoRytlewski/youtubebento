@@ -1,42 +1,80 @@
 <script setup>
 const route = useRoute();
-const videosA = ref([]);
 const quota = ref(0);
+const videoList = ref();
 
 async function fetchVideos() {
-  const apiKey = "AIzaSyB1VciZSe8D7Qyw7Xjf2zZs66hGE7KEd7U";
   try {
-    const response = await $fetch(
+    const apiKey = "AIzaSyCHY3vmOQ9ZZn7TAZXcqFn3_Ph-eWikI7U";
+
+    const videosResponse = await $fetch(
       `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${route.params.search}&key=${apiKey}`
     );
-    console.log(response.items);
-    videosA.value = response.items;
+    const videoIds = videosResponse.items
+      .map((item) => item.id.videoId)
+      .join(",");
+    const videosDetailsResponse = await $fetch(
+      `https://www.googleapis.com/youtube/v3/videos?part=contentDetails,statistics&id=${videoIds}&key=${apiKey}`
+    );
+    const videoDetailsMap = {};
+    videosDetailsResponse.items.forEach((video) => {
+      videoDetailsMap[video.id] = video;
+    });
+
+    const channelIds = videosResponse.items
+      .map((item) => item.snippet.channelId)
+      .join(",");
+    const channelsDetailsResponse = await $fetch(
+      `https://www.googleapis.com/youtube/v3/channels?part=snippet&id=${channelIds}&key=${apiKey}`
+    );
+    const channelDetailsMap = {};
+    channelsDetailsResponse.items.forEach((channel) => {
+      channelDetailsMap[channel.id] = channel;
+    });
+
+    videoList.value = videosResponse.items.map((video) => ({
+      ...video,
+      duration:
+        videoDetailsMap[video.id.videoId]?.contentDetails.duration || "0",
+      viewCount: videoDetailsMap[video.id.videoId]?.statistics.viewCount || "0",
+      channelLogo:
+        channelDetailsMap[video.snippet.channelId]?.snippet.thumbnails.default
+          .url || "",
+    }));
+
+    console.log(videoList.value);
   } catch (error) {
     console.error("Erreur lors de la récupération des vidéos :", error);
     quota.value = 1;
   }
 }
+
 onMounted(() => {
   fetchVideos();
 });
+
+console.log(videoList.value);
 </script>
 
 <template>
   <div
     class="w-[87rem] pl-12 h-fit flex flex-wrap justify-start gap-y-6 items-center"
   >
-    <div v-for="video in videosA" class="">
-      <videoboxSearch
-        :id="video.id"
-        :titre="video.snippet.title"
-        :chaine="video.chaine"
-        :nombre_vues="video.nombre_vues"
-        :logo_chaine="video.logo_chaine"
-        :miniature="video.snippet.thumbnails.medium.url"
-        :date_sortie="video.date_sortie"
-        :temps="video.temps"
-      />
+    <div v-for="video in videoList" :key="video.id" class="">
+      <div v-if="video.id.videoId">
+        <videoboxSearch
+          :id="video.id.videoId"
+          :titre="video.snippet.title"
+          :chaine="video.snippet.channelTitle"
+          :nombre_vues="video.viewCount"
+          :logo_chaine="video.channelLogo"
+          :miniature="video.snippet.thumbnails.medium.url"
+          :date_sortie="video.snippet.publishedAt"
+          :temps="video.duration ? video.duration : 'Durée inconnue'"
+        />
+      </div>
     </div>
+
     <div
       v-if="quota === 1"
       class="text-white h-96 flex items-center justify-center w-screen font-bold"
