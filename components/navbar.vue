@@ -19,7 +19,7 @@ function searchFunction() {
           <img class="hidden md:flex" src="../assets/img/logo.svg" alt="" />
           <img
             class="md:hidden h-10"
-            src="../assets/img/Mobilelogo.svg"
+            src="../assets/img/mobilelogo.svg"
             alt=""
           />
         </p>
