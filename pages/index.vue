@@ -1,11 +1,11 @@
 <template>
-  <div class="w-[77rem] h-fit flex flex-col justify-center items-center">
-    <div class="flex container">
+  <div class="h-fit flex flex-col gap-2 justify-center items-center">
+    <div class="flex container md:w-[77rem]">
       <SideMenu />
       <videolist />
     </div>
-    <div class="h-96 w-[77rem] flex relative">
-      <div class="h-full w-[57rem]" />
+    <div class="h-96 flex relative">
+      <div class="max-w-[77rem] xl:w-screen md:w-[50rem]" />
       <FollowMenu />
     </div>
   </div>

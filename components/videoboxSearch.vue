@@ -88,7 +88,7 @@ const fixLogo = logo_chaine;
 <template>
   <NuxtLink :to="`/detail/${id}/${titre}`">
     <div
-      class="flex items-center justify-center group cursor-pointer select-none"
+      class="flex items-center justify-center group cursor-pointer select-none "
     >
       <div
         class="relative w-[292px] ml-[24px] rounded-xl h-[250px] overflow-hidden z-50 group-hover:scale-105 duration-200 delay-100"

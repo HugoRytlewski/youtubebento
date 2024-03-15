@@ -50,7 +50,7 @@ const fixLogo = "/image/" + logo_chaine;
       class="flex items-center justify-center group cursor-pointer select-none"
     >
       <div
-        class="relative w-[292px] ml-[24px] rounded-xl h-[250px] overflow-hidden z-50 group-hover:scale-105 duration-200 delay-100"
+        class="relative w-[292px] md:ml-[24px] rounded-xl h-[250px] overflow-hidden z-50 group-hover:scale-105 duration-200 delay-100"
       >
         <div class="h-[164px] overflow-hidden relative">
           <img
@@ -99,7 +99,7 @@ const fixLogo = "/image/" + logo_chaine;
         </div>
       </div>
       <img
-        class="w-[9rem] h-[9rem] object-cover absolute filter blur-2xl opacity-20 scale-[2.1] hidden group-hover:flex duration-300"
+        class="w-[9rem] h-[9rem] object-cover absolute filter blur-xl opacity-20 scale-[2.1] hidden group-hover:flex duration-300"
         :src="fixMiniature"
       />
     </div>

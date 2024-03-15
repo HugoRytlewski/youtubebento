@@ -1,8 +1,11 @@
 <template>
-  <div class="p-10 w-screen items-center flex flex-col">
+  <div class="flex flex-col justify-center items-center p-10">
     <nav class="">
       <navbar />
     </nav>
     <slot />
+    <footer>
+      <Footer />
+    </footer>
   </div>
 </template>

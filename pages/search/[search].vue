@@ -2,13 +2,14 @@
 const route = useRoute();
 const quota = ref(0);
 const videoList = ref();
+const maxResults = 12;
 
 async function fetchVideos() {
   try {
     const apiKey = "AIzaSyCHY3vmOQ9ZZn7TAZXcqFn3_Ph-eWikI7U";
 
     const videosResponse = await $fetch(
-      `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${route.params.search}&key=${apiKey}`
+      `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${route.params.search}&key=${apiKey}&maxResults=${maxResults}`
     );
     const videoIds = videosResponse.items
       .map((item) => item.id.videoId)
@@ -58,7 +59,7 @@ console.log(videoList.value);
 
 <template>
   <div
-    class="w-[87rem] pl-12 h-fit flex flex-wrap justify-start gap-y-6 items-center"
+    class="flex w-screen justify-center sm:justify-start md:w-[80rem] gap-y-10 overflow-visible flex-wrap"
   >
     <div v-for="video in videoList" :key="video.id" class="">
       <div v-if="video.id.videoId">

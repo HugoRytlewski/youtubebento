@@ -20,13 +20,14 @@ if (!video) {
 </script>
 
 <template>
-  <div class="w-[77rem] h-fit flex flex-col justify-center items-left">
-    <div class="flex">
+  <div class="flex flex-col justify-center items-left">
+    <div class="flex flex-col gap-10 md:gap-0 md:flex-row">
+      <div class="flex flex-col">
       <div
-        class="w-[940px] bg-gray-800 h-[500px] rounded-lg p-4 shadow-lg group flex justify-center flex flex-col text-white font-bold"
+        class="h-[16rem] w-screen sm:w-[30rem] sm:h-[20rem] md:w-[940px] bg-gray-800 md:h-[500px] rounded-lg p-1 md:p-4 shadow-lg group flex justify-center flex flex-col text-white font-bold"
       >
         <iframe
-          width="908"
+          width=""
           height="480"
           :src="video.link"
           frameborder="0"
@@ -34,10 +35,14 @@ if (!video) {
           autoplay
         ></iframe>
       </div>
-      <div>
-        <div class="flex flex-col gap-4 h-10">
-          <div v-for="video in videos" class="flex flex-wrap gap-y-[10px]">
+      <div class="h-10 w-full flex items-center pt-6 pl-4 md:text-xl">
+        <p class="text-white font-bold">{{ video.titre }}</p>
+      </div>
+    </div>
+    <p class="md:hidden text-white font-bold pl-6">Suggestions</p>
+      <div class="w-screen md:w-fit flex flex-col justify-center items-center gap-4">
             <VideoBoxDetail
+              v-for="video in videos"
               :id="video.id"
               :titre="video.titre"
               :chaine="video.chaine"
@@ -47,12 +52,7 @@ if (!video) {
               :date_sortie="video.date_sortie"
               :temps="video.temps"
             />
-          </div>
-        </div>
       </div>
-    </div>
-    <div class="h-10 w-full flex items-center pt-6 pl-4 text-xl">
-      <p class="text-white font-bold">{{ video.titre }}</p>
     </div>
   </div>
 </template>

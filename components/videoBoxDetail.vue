@@ -45,19 +45,19 @@ const fixLogo = "/image/" + logo_chaine;
 
 <template>
   <NuxtLink :to="`/detail/${id}/${titre}`">
-    <div class="pl-5">
+    <div class="md:pl-5">
       <div
-        class="h-[7rem] w-[27rem] rounded-lg bg-gray-800 hover:bg-gray-700 duration-300 flex gap-2 p-2"
+        class="h-[15rem] w-[20rem] md:h-[7rem] md:w-[27rem] rounded-lg bg-gray-800 hover:bg-gray-700 duration-300 flex flex-col md:flex-row gap-2 p-2"
       >
         <img
-          class="h-full w-min-[12rem] rounded-lg"
+          class="h-[10rem] md:h-full object-cover md:w-min-[12rem] rounded-lg"
           :src="fixMiniature"
           alt="miniature"
         />
         <div
           class="flex flex-col items-start justify-start text-left w-[14rem]"
         >
-          <p class="text-white text-sm">{{ titre }}</p>
+          <p class="text-white text-sm line-clamp-2">{{ titre }}</p>
           <p class="text-neutral-300 text-[12px]">
             {{ chaine }} • {{ vueCounter(nombre_vues) }} vues •
             {{ dateDiff(new Date(date_sortie)) }}

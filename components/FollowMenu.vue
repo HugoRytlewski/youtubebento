@@ -1,6 +1,6 @@
 <template>
   <div
-    class="h-[39.6rem] pl-4 bg-[#1F2937] w-[18.5rem] rounded-lg absolute bottom-0 right-0"
+    class="hidden lg:flex flex-col h-[40.1rem] pl-4 bg-[#1F2937] w-[18.2rem] xl:w-[18.5rem] rounded-lg absolute bottom-0 right-0"
   >
     <div class="mt-2 flex h-9 pl-3 items-center w-full rounded-lg">
       <p class="text-gray-500 text-sm font-bold">Abonnements</p>
