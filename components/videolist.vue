@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex w-screen justify-center md:w-[80rem] gap-y-10 overflow-visible flex-wrap"
+    class="flex w-screen justify-center md:justify-start md:w-[80rem] gap-y-10 overflow-visible flex-wrap"
   >
     <VideoBox
       v-for="video in videos"
