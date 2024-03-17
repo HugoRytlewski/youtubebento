@@ -5,8 +5,10 @@
       <videolist />
     </div>
     <div class="h-96 flex relative">
-      <div class="max-w-[77rem] xl:w-screen md:w-[50rem]" />
+      <div class="max-w-[77rem] xl:w-screen md:w-[50rem] flex rounded-xl">
+        <shortslist />
       <FollowMenu />
+      </div>
     </div>
   </div>
 </template>
