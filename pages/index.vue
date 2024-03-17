@@ -11,7 +11,7 @@
       </div>
     </div>
   </div>
-  <div class="h-20 w-6"></div>
+  <div class="h-96 w-6"></div>
 
 </template>
 

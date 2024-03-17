@@ -39,10 +39,25 @@
   
       </div>
   </div>
+  <div>
+    <div
+    class="mt-6  md:hidden bg-red-600 cursor-pointer hover:bg-red-800 duration-300 rounded-lg flex justify-center items-center"
+  >
+    <p class="text-white text-xl font-bold p-1 flex gap-1  ">
+      <img class="hidden md:flex" src="../assets/img/logo.svg" alt="" />
+      <img
+        class="md:hidden h-6"
+        src="../assets/img/short.svg"
+        alt=""
+      />
+      <p>Shorts</p>
+    </p>
+  </div>
   <div class="flex md:hidden w-[20rem] mt-6 p-2 h-96 overflow-y-hidden overflow-x-scroll gap-4">
     <div v-for="short in shorts">
       <shortBox :id="short.id" :titre="short.titre" :nombre_vues="short.vue" :miniature="short.photo" />
     </div>
+  </div>
 
   </div>
   

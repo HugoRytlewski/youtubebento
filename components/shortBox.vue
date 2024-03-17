@@ -22,7 +22,8 @@ const fixMiniature = "/image/" + miniature;
 
 </script>
 <template>
-    <div class="relative h-[365px] w-[182px] overflow-hidden rounded-2xl cursor-pointer group">
+  <nuxt-link :to="'/detail/' + id +'/'+ titre">
+    <div  class="relative h-[365px] w-[182px] overflow-hidden rounded-2xl cursor-pointer group">
         <img
         class="h-full object-cover"
         :src="fixMiniature"
@@ -37,4 +38,5 @@ const fixMiniature = "/image/" + miniature;
             
         </div>
     </div>
+  </nuxt-link>
     </template>
