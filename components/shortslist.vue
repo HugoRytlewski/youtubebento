@@ -2,13 +2,13 @@
 <template>
   <div class="mt-4 md:flex h-full select-none hidden">
     <div class="w-[6rem] flex flex-col gap-3  bg-[#111827] ">
-      <div class="h-[100px] w-[80px] bg-red-600 rounded-2xl flex items-center justify-center rounded-2xl z-20 cursor-pointer" @click="previousSlide"> 
+      <div class="h-[100px] w-[80px] bg-red-600 rounded-2xl flex items-center justify-center rounded-2xl z-20 " > 
         <img src="../assets/img/shortt.svg" alt="" class="stroke-white h-8" />
       </div>
-      <div class="h-[120px] w-[80px] bg-[#1F2937] flex items-center justify-center rounded-2xl z-20 cursor-pointer hover:bg-gray-600 duration-300" @click="previousSlide"> 
+      <div class="h-[120px] w-[80px] bg-[#1F2937] flex items-center justify-center rounded-2xl z-20 cursor-pointer hover:bg-gray-600 duration-300" @click="nextSlide"> 
         <img src="../assets/img/voirplus.svg" alt="" class="-rotate-90 stroke-white h-7" />
       </div>
-      <div class="h-[120px] w-[80px] bg-[#1F2937] flex items-center justify-center rounded-2xl z-20 hover:bg-gray-600 duration-300 cursor-pointer" @click="nextSlide"> 
+      <div class="h-[120px] w-[80px] bg-[#1F2937] flex items-center justify-center rounded-2xl z-20 hover:bg-gray-600 duration-300 cursor-pointer" @click="previousSlide"> 
         <img src="../assets/img/voirplus.svg" alt="" class="rotate-90 stroke-white h-7" />
       </div>
     </div>
