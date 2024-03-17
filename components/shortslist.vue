@@ -39,6 +39,12 @@
   
       </div>
   </div>
+  <div class="flex md:hidden w-[20rem] mt-6 p-2 h-96 overflow-y-hidden overflow-x-scroll gap-4">
+    <div v-for="short in shorts">
+      <shortBox :id="short.id" :titre="short.titre" :nombre_vues="short.vue" :miniature="short.photo" />
+    </div>
+
+  </div>
   
   </template>
   

@@ -7,10 +7,12 @@
     <div class="h-96 flex relative">
       <div class="max-w-[77rem] xl:w-screen md:w-[50rem] flex rounded-xl">
         <shortslist />
-      <FollowMenu />
+        <FollowMenu />
       </div>
     </div>
   </div>
+  <div class="h-20 w-6"></div>
+
 </template>
 
 <style>
