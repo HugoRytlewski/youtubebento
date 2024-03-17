@@ -41,7 +41,7 @@
   </div>
   <div>
     <div
-    class="mt-6  w-44 md:hidden bg-red-600 cursor-pointer hover:bg-red-800 duration-300 rounded-lg flex justify-center items-center"
+    class="mt-6  md:hidden bg-red-600 cursor-pointer hover:bg-red-800 duration-300 rounded-lg flex justify-center items-center"
   >
     <p class="text-white text-xl font-bold p-1 flex gap-1">
       <img class="hidden md:flex" src="../assets/img/logo.svg" alt="" />
