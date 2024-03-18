@@ -7,5 +7,6 @@
     <footer>
       <Footer />
     </footer>
+      <FooterDesign />
   </div>
 </template>
