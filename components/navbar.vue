@@ -5,6 +5,7 @@ const search = ref("");
 const router = useRouter();
 
 function searchFunction() {
+  if (search.value === "") return;
   router.push(`/search/${search.value}`);
 }
 </script>

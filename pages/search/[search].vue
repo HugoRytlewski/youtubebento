@@ -80,7 +80,7 @@ console.log(videoList.value);
       v-if="quota === 1"
       class="text-white h-96 flex items-center justify-center w-screen font-bold"
     >
-      Oups... Le quota de recherche dépassé
+      Oups... Une erreur est survenue.
     </div>
   </div>
 </template>

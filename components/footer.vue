@@ -12,9 +12,10 @@ console.log(router.path);
         class=" w-[20rem] bg-[#1F2937] bg-opacity-70 rounded-xl backdrop-blur-md flex  justify-around items-center h-14 rounded-xl"
       >
       <nuxtLink to="/">
-        <div :class="[router.path === '/' ? 'bg-opacity-30' : 'bg-opacity-0', 'h-10 hover:bg-opacity-30 bg-neutral-300 duration-300 flex items-center rounded-2xl w-10 justify-center']">
+        <div :class="[router.path === '/' ? 'bg-opacity-30' : 'bg-opacity-0', ' h-10 hover:bg-opacity-30 bg-neutral-300 duration-300 flex items-center rounded-2xl w-10 justify-center']">
      
-        <img src="../assets/img/home.svg" alt="" class="h-5" />
+        <img src="../assets/img/home.svg" alt="" class="h-5 " />
+          
         </div>
       </nuxtLink>
         <div
