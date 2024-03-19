@@ -35,11 +35,11 @@ if (currentSlideSet.value > 0) {
       <div class="h-[100px] w-[80px] bg-red-600 rounded-2xl flex items-center justify-center rounded-2xl z-20 " > 
         <img src="../assets/img/shortt.svg" alt="" class="stroke-white h-8" />
       </div>
-        <div :class="[currentSlideSet === 1 ? 'bg-[#1F2937] hover:bg-[#1F2937]  bg-opacity-40 hover:bg-opacity-40 cursor-not-allowed':'bg-[#1F2937]' , 'h-[120px] w-[80px]  flex items-center justify-center rounded-2xl z-20 hover:bg-gray-600 duration-300 cursor-pointer']" @click="nextSlide">
+        <div :class="[currentSlideSet === 1 ? 'bg-[#1F2937] hover:bg-[#1F2937]  bg-opacity-40 hover:bg-opacity-40 cursor-not-allowed':'bg-[#1F2937] hover:bg-gray-600 duration-300 cursor-pointer' , 'h-[120px] w-[80px]  flex items-center justify-center rounded-2xl z-20 ']" @click="nextSlide">
 
         <img src="../assets/img/voirplus.svg" alt="" class="-rotate-90 stroke-white h-7" />
       </div>
-      <div :class="[currentSlideSet === 0 ? 'bg-[#1F2937] hover:bg-[#1F2937]  bg-opacity-40 hover:bg-opacity-40 cursor-not-allowed':'bg-[#1F2937]' , 'h-[120px] w-[80px]  flex items-center justify-center rounded-2xl z-20 hover:bg-gray-600 duration-300 cursor-pointer']" @click="previousSlide">
+      <div :class="[currentSlideSet === 0 ? 'bg-[#1F2937] hover:bg-[#1F2937]  bg-opacity-40 hover:bg-opacity-40 cursor-not-allowed':'bg-[#1F2937] hover:bg-gray-600 duration-300 cursor-pointer' , 'h-[120px] w-[80px]  flex items-center justify-center rounded-2xl z-20 ']" @click="previousSlide">
         <img src="../assets/img/voirplus.svg" alt="" class="rotate-90 stroke-white h-7" />
       </div>
     </div>
