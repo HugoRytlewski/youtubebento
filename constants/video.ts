@@ -1,6 +1,6 @@
 export const videos = [
   {
-    id: 1,
+    id: "ZRJo0yJWdfY?si=8pb3KKEFq2BPgNvG",
     titre:
       "5 jours pour traverser la Corse à pied ! (La randonnée la plus dure d’Europe) GR20",
     chaine: "Inoxtag",
@@ -12,7 +12,7 @@ export const videos = [
     link: "https://www.youtube.com/embed/ZRJo0yJWdfY?si=ZP0yWiI_V4x20WKB",
   },
   {
-    id: 2,
+    id: "jarbNjyux3s?si=a9faruxsC9dqj9P9",
     titre: "Tout sur Tortues Ninja (1987)",
     chaine: "Bazar du Grenier",
     nombre_vues: 685000,
@@ -23,7 +23,7 @@ export const videos = [
     link: "https://www.youtube.com/embed/jarbNjyux3s?si=mL-aj5Nm2TcD2BYL",
   },
   {
-    id: 3,
+    id: "IxczEtQUFgg?si=Y2Ew24yDv9l5dJqC",
     titre:
       "Je prototype le dernier Dropdown de ma carrière. Et je te l’offre 🎁",
     chaine: "Mickadoule",
@@ -35,7 +35,7 @@ export const videos = [
     link: "https://www.youtube.com/embed/IxczEtQUFgg?si=Y2Ew24yDv9l5dJqC",
   },
   {
-    id: 4,
+    id: "B2eSchvRNJE?si=3l0A46J9UM_NbNVG",
     titre: "HOT ONES : Mister V sera-t-il meilleur qu'au GP Explorer ?",
     chaine: "Studio Bagel",
     nombre_vues: 1900000,
@@ -46,7 +46,7 @@ export const videos = [
     link: "https://www.youtube.com/embed/B2eSchvRNJE?si=3l0A46J9UM_NbNVG",
   },
   {
-    id: 5,
+    id: "9dnZQC_PPNk?si=P4x8DePDIat62fBc",
     chaine: "CYRILmp4",
     titre: "5€ pendant une journée en Amérique du Sud",
     nombre_vues: 370000,

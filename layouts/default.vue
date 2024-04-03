@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col justify-center items-center p-10">
+  <div class="flex flex-col justify-center items-center md:p-10 pt-10">
     <nav class="">
       <navbar />
     </nav>

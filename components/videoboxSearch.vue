@@ -83,11 +83,32 @@ function convertDuration(durationString) {
 const fixMiniature = miniature;
 console.log(logo_chaine);
 const fixLogo = logo_chaine;
+
+
+const router = useRouter()
+
+const DetailVideo = () => {
+  const video = {
+    id: id,
+    titre: titre,
+    chaines: chaine,
+    nombre_vues: nombre_vues,
+    logo_chaine: logo_chaine,
+    miniature: miniature,
+    date_sortie: date_sortie,
+    temps: temps
+    
+  }
+  router.push({
+    path: `/detail`,
+    query: { data: JSON.stringify(video) }
+  })
+}
 </script>
 
 <template>
-  <NuxtLink :to="`/detail/${id}/${titre}`">
     <div
+      @click="DetailVideo()"
       class="flex items-center justify-center group cursor-pointer select-none "
     >
       <div
@@ -144,5 +165,4 @@ const fixLogo = logo_chaine;
         :src="fixMiniature"
       />
     </div>
-  </NuxtLink>
 </template>

@@ -54,7 +54,7 @@ onMounted(() => {
   fetchVideos();
 });
 
-console.log(videoList.value);
+console.log(videoList);
 </script>
 
 <template>

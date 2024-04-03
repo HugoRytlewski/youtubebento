@@ -41,16 +41,37 @@ function vueCounter(nombre_vues) {
 
 const fixMiniature = "/image/" + miniature;
 const fixLogo = "/image/" + logo_chaine;
+
+const router = useRouter()
+
+const DetailVideo = (id, titre) => {
+  const video = {
+    id: id,
+    titre: titre,
+    chaines: chaine,
+    nombre_vues: nombre_vues,
+    logo_chaine: "/image/"+logo_chaine,
+    miniature: miniature,
+    date_sortie: date_sortie,
+    temps: temps
+    
+
+  }
+  router.push({
+    path: `/detail/`,
+    query: { data: JSON.stringify(video) }
+    
+  })
+}
 </script>
 
 <template>
-  <NuxtLink :to="`/detail/${id}/${titre}`">
-    <div class="md:pl-5">
+    <div class="md:pl-5 cursor-pointer" @click="DetailVideo(id,titre)" >
       <div
-        class="h-[15rem] w-[20rem] md:h-[7rem] md:w-[27rem] rounded-lg bg-gray-800 hover:bg-gray-700 duration-300 flex flex-col md:flex-row gap-2 p-2"
+        class="h-[15rem] w-[20rem] md:h-[6rem] md:w-[20rem] rounded-lg bg-gray-800 hover:bg-gray-700 duration-300 flex flex-col md:flex-row gap-2 p-2"
       >
         <img
-          class="h-[10rem] md:h-full object-cover md:w-min-[12rem] rounded-lg"
+          class="h-[10rem] md:h-full object-cover md:w-min-[19rem] w-[8rem] rounded-lg"
           :src="fixMiniature"
           alt="miniature"
         />
@@ -65,5 +86,4 @@ const fixLogo = "/image/" + logo_chaine;
         </div>
       </div>
     </div>
-  </NuxtLink>
 </template>
