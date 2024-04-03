@@ -71,7 +71,7 @@ const DetailVideo = (id, titre) => {
         class="h-[15rem] w-[20rem] md:h-[6rem] md:w-[20rem] rounded-lg bg-gray-800 hover:bg-gray-700 duration-300 flex flex-col md:flex-row gap-2 p-2"
       >
         <img
-          class="h-[10rem] md:h-full object-cover md:w-min-[19rem] w-[8rem] rounded-lg"
+          class="h-[10rem] md:h-full object-cover md:w-min-[19rem] md:w-[8rem] w-full rounded-lg"
           :src="fixMiniature"
           alt="miniature"
         />
