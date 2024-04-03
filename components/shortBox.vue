@@ -20,10 +20,26 @@ function vueCounter(nombre_vues) {
 }
 const fixMiniature = "/image/" + miniature;
 
+const router = useRouter()
+
+const DetailVideo = () => {
+  const video = {
+    id: id,
+    titre: titre,
+    nombre_vues: nombre_vues,
+    miniature: miniature,
+    
+
+  }
+  router.push({
+    path: `/detail/`,
+    query: { data: JSON.stringify(video) }
+    
+  })
+}
 </script>
 <template>
-  <nuxt-link :to="'/detail/' + id +'/'+ titre">
-    <div  class="relative h-[365px] w-[182px] overflow-hidden rounded-2xl cursor-pointer group">
+    <div @click="DetailVideo()"  class="relative h-[365px] w-[182px] overflow-hidden rounded-2xl cursor-pointer group">
         <img
         class="h-full object-cover"
         :src="fixMiniature"
@@ -38,5 +54,4 @@ const fixMiniature = "/image/" + miniature;
             
         </div>
     </div>
-  </nuxt-link>
     </template>
