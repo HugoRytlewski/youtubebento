@@ -54,9 +54,10 @@
           ></iframe>
         </div>
         <div class="md:h-[8rem]  bg-gray-800  rounded-xl w-screen md:w-[56.5rem] gap-4 flex flex-col   items-start p-5  md:text-xl">
-          <div class="flex  w-full justify-between">
+          <div class="flex flex-col md:flex-row w-full md:justify-between items-start">
             <p class="text-white font-sans">{{ videoData.titre }}</p>
-            <p class="text-white font-sans text-[1rem] flex gap-2">{{ videoData.nombre_vues }} <img src="../assets/img/vues.svg" alt=""></p>
+            <p class="text-white font-sans text-[1rem] items-center justify-center flex gap-2">{{ videoData.nombre_vues }} <img src="../assets/img/vues.svg" alt=""></p>
+
           </div>
           
 

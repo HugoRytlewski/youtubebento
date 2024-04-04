@@ -11,8 +11,8 @@ console.log(router.path);
       <div
         class=" w-[20rem] bg-[#1F2937] bg-opacity-70 rounded-xl backdrop-blur-md flex  justify-around items-center h-14 rounded-xl"
       >
-      <nuxtLink to="/">
-        <div :class="[router.path === '/' ? 'bg-opacity-30' : 'bg-opacity-0', ' h-10 hover:bg-opacity-30 bg-neutral-300 duration-300 flex items-center rounded-2xl w-10 justify-center']">
+      <nuxtLink to="/accueil">
+        <div :class="[router.path === '/accueil' ? 'bg-opacity-30' : 'bg-opacity-0', ' h-10 hover:bg-opacity-30 bg-neutral-300 duration-300 flex items-center rounded-2xl w-10 justify-center']">
      
         <img src="../assets/img/home.svg" alt="" class="h-5 " />
           
