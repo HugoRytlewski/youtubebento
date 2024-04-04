@@ -12,7 +12,7 @@ function searchFunction() {
 
 <template>
   <nav class="flex justify-between w-fit gap-[23px]">
-    <NuxtLink to="/">
+    <NuxtLink to="/accueil">
       <div
         class="sm:w-[8rem] w-20 md:w-[11.68rem] h-[3.75rem] bg-red-600 cursor-pointer hover:bg-red-800 duration-300 rounded-xl flex justify-center items-center"
       >
