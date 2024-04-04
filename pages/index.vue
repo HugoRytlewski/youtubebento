@@ -1,23 +1,12 @@
+<script setup>
+definePageMeta({
+  layout: false,
+});
+</script>
+
 <template>
-  <div class="h-fit flex flex-col gap-2 justify-center items-center">
-    <div class="flex container md:w-[77rem]">
-      <SideMenu />
-      <videolist />
-    </div>
-    <div class="h-96 flex relative">
-      <div class="max-w-[77rem] xl:w-screen md:w-[50rem] flex rounded-xl">
-        <shortslist />
-        <FollowMenu />
-      </div>
-    </div>
+  <div class="p-6 h-screen w-screen flex flex-col gap-10 items-center justify-center">
+    <p class="text-white font-bold text-2xl ">Ce projet est en cours de développement , certaines fonctionnalités ne sont donc pas opérationnelles </p>
+      <a href="/accueil" class="h-14 bg-red-600 hover:bg-red-800 duration-200 text-white font-bold rounded-xl p-2 ">Accéder à la page d'accueil</a>
   </div>
-  <div class="h-20 w-6"></div>
-
 </template>
-
-<style>
-body {
-  background-color: #111827;
-  overflow-x: hidden;
-}
-</style>

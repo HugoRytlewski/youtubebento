@@ -53,30 +53,37 @@
             autoplay
           ></iframe>
         </div>
-        <div class="md:h-40  bg-gray-800 justify-between rounded-xl w-screen md:w-[56.5rem] gap-4 flex flex-col   items-start p-6  md:text-xl">
-          <p class="text-white font-sans">{{ videoData.titre }}</p>
+        <div class="md:h-[8rem]  bg-gray-800  rounded-xl w-screen md:w-[56.5rem] gap-4 flex flex-col   items-start p-5  md:text-xl">
+          <div class="flex  w-full justify-between">
+            <p class="text-white font-sans">{{ videoData.titre }}</p>
+            <p class="text-white font-sans text-[1rem] flex gap-2">{{ videoData.nombre_vues }} <img src="../assets/img/vues.svg" alt=""></p>
+          </div>
+          
+
           <div class="flex flex-col md:flex-row md:w-[53rem] gap-6 md:gap-0 justify-between ">
-            <div class="flex gap-4 bg-gray-900 rounded-xl p-3 h-[4rem]">
+            <div class="flex gap-4 bg-gray-900 rounded-xl p-2 h-[3rem]">
               <img
               :src="videoData.logo_chaine"
               alt=""
-              class=" rounded-xl h-full "
+              class=" rounded-lg h-full "
             />
             <div class="flex flex-col justify-around items-start">
               <p class="text-white font-bold text-sm">{{videoData.chaines}}</p>
-              <p class="text-neutral-300 text-sm">{{videoData.nombre_vues}} vues</p>
+              <p class="text-neutral-300 text-sm">{{videoData.nombre_vues}} Abonnés</p>
             </div>   
+            
             <div class="h-full flex items-center ">
-              <button class="bg-gray-700 p-2 w-20 h-8 flex items-center  text-white text-sm rounded-lg">S'abonner</button>
+              <button class="bg-gray-700 hover:bg-gray-800 duration-200 p-2 w-20 h-7 flex items-center  text-white text-sm rounded-lg">S'abonner</button>
             
             </div>     
   
           </div>
-          <div class="flex gap-4 rounded-xl p-2 h-[4rem] w-fit bg-gray-900  items-center">
-            <button class="hover:bg-gray-700 duration-300 bg-gray-900 p-2 flex gap-2 h-12 w-20   items-center justify-center text-white text-sm rounded-lg">
+          <div class="flex gap-4 rounded-xl p-2 h-[3rem] w-fit bg-gray-900  items-center">
+            <button class="hover:bg-gray-700 duration-300 bg-gray-900 p-2 flex gap-2 h-10 w-20   items-center justify-center text-white text-sm rounded-lg">
               <img src="/assets/img/like.svg" alt="">
             </button>
-            <button class="hover:bg-gray-700 duration-300 bg-gray-900 p-2  h-12 w-20 flex items-center justify-center text-white text-sm rounded-lg">
+            
+            <button class="hover:bg-gray-700 duration-300 bg-gray-900 p-2  h-10 w-20 flex items-center justify-center text-white text-sm rounded-lg">
               <img src="/assets/img/dislike.svg" alt="">
             </button>
             </div>
